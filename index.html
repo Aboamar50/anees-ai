@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#edf4f1">
+<title>أنيس — مساحة هادئة لك</title>
+<style>
+:root{--bg:#edf4f1;--paper:#fbfdfb;--ink:#243b36;--muted:#71847d;--green:#527d70;--green-dark:#345e53;--line:#dce8e2;--rose:#b66e68;--shadow:0 24px 70px rgba(43,76,65,.10)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#dcebe4 0,transparent 55%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:22px}
+button{font:inherit;cursor:pointer;border:0;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}button:focus-visible{outline:3px solid #8db6a6;outline-offset:4px}.app{width:min(100%,440px);min-height:min(780px,calc(100dvh - 44px));display:flex;flex-direction:column;position:relative;overflow:hidden;background:rgba(251,253,251,.92);border:1px solid rgba(255,255,255,.85);border-radius:30px;box-shadow:var(--shadow)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:24px 25px 12px}.brand{font-size:22px;font-weight:700;letter-spacing:-.5px}.brand-mark{display:inline-flex;width:30px;height:30px;border-radius:11px;align-items:center;justify-content:center;background:#e0eee7;color:var(--green-dark);margin-left:8px;font-size:17px}.tiny-label{font-size:11px;color:var(--muted);background:#eef4f0;padding:8px 11px;border-radius:20px}
+.screen{display:none;flex:1;flex-direction:column;align-items:center;text-align:center;padding:28px 25px 30px}.screen.active{display:flex}.welcome{justify-content:center;padding-bottom:55px}.orb-wrap{position:relative;width:180px;height:180px;display:grid;place-items:center;margin:0 auto 34px}.orb-glow{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,#d6e9df 0,#e4f0e9 48%,rgba(228,240,233,0) 72%);filter:blur(5px)}.orb{position:relative;width:126px;height:126px;border-radius:50%;background:radial-gradient(circle at 32% 26%,#f9fffb 0,#bdd9cb 26%,#7eaa96 58%,#527d70 100%);box-shadow:inset -12px -15px 26px rgba(39,83,68,.18),0 15px 35px rgba(82,125,112,.20)}.orb:after{content:"";position:absolute;width:44px;height:20px;top:24px;right:26px;border-radius:50%;background:rgba(255,255,255,.42);filter:blur(7px);transform:rotate(-32deg)}
+h1{font-size:34px;margin:0 0 14px;letter-spacing:-1px} .tagline{font-size:16px;line-height:1.9;color:var(--muted);max-width:290px;margin:0 auto 30px}.primary{background:var(--green-dark);color:white;padding:16px 24px;border-radius:17px;width:100%;max-width:300px;font-weight:700;box-shadow:0 9px 20px rgba(52,94,83,.18)}.primary:hover{background:#284c42;transform:translateY(-1px)}.privacy{font-size:11px;color:#91a099;margin-top:20px}
+.chat{justify-content:space-between;padding-top:35px}.chat-heading{font-size:23px;margin:0 0 8px}.subheading{color:var(--muted);font-size:13px;line-height:1.8;margin:0}.state-area{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;min-height:300px}.state-orb-wrap{width:210px;height:210px;display:grid;place-items:center;position:relative;margin-bottom:28px}.state-orb-wrap .orb{width:150px;height:150px}.state-orb-wrap:before,.state-orb-wrap:after{content:"";position:absolute;border:1px solid rgba(105,153,131,.23);border-radius:50%;inset:12px;animation:breathe 5s ease-in-out infinite}.state-orb-wrap:after{inset:0;animation-delay:1.5s}.state-orb-wrap.muted .orb{filter:grayscale(.55);opacity:.78}.state-orb-wrap.ended .orb{background:radial-gradient(circle at 32% 26%,#f9fffb 0,#d3e0d8 26%,#9eb5a8 58%,#718b7e 100%)}@keyframes breathe{0%,100%{transform:scale(.96);opacity:.45}50%{transform:scale(1.04);opacity:1}}.state-text{font-size:15px;font-weight:700}.state-hint{font-size:12px;color:var(--muted);margin-top:9px}
+.controls{display:flex;gap:18px;align-items:center;justify-content:center;width:100%;padding-top:18px}.control{width:66px;height:66px;border-radius:22px;background:#edf4f0;color:var(--green-dark);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px}.control svg{width:22px;height:22px}.control span{font-size:10px}.control:hover{background:#e1eee7;transform:translateY(-2px)}.control.end{background:#f8e9e7;color:#a6534d}.control.end:hover{background:#f2d9d6}.control.active{background:#dcebe2;box-shadow:inset 0 0 0 1px #9ab9a8}.bottom-note{font-size:11px;color:#91a099;margin-top:24px;line-height:1.8}.footer{padding:0 20px 17px;text-align:center;font-size:10px;color:#a0ada6}
+@media(max-width:390px){body{padding:10px}.app{min-height:calc(100dvh - 20px);border-radius:24px}.top{padding:19px 20px 8px}.screen{padding-left:21px;padding-right:21px}.orb-wrap{transform:scale(.9);margin-bottom:20px}h1{font-size:30px}.state-orb-wrap{transform:scale(.9)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="app" aria-label="تطبيق أنيس">
+  <header class="top">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span>أنيس</div>
+    <span class="tiny-label">مساحتك الهادئة</span>
+  </header>
+  <section id="welcome" class="screen welcome active">
+    <div class="orb-wrap" aria-hidden="true"><div class="orb-glow"></div><div class="orb"></div></div>
+    <h1>أهلًا بك في أنيس</h1>
+    <p class="tagline">خذ راحتك، فضفض براحتك، ورتّب أفكارك على مهل.</p>
+    <button id="startBtn" class="primary">ابدأ الآن <span aria-hidden="true">←</span></button>
+    <p class="privacy">مساحة هادئة لك، دون استعجال أو أحكام.</p>
+  </section>
+  <section id="chat" class="screen chat" aria-label="جلسة أنيس">
+    <div>
+      <h2 class="chat-heading">أنا هنا معك</h2>
+      <p class="subheading">خذ نفسًا هادئًا… يمكنك البدء عندما تكون مستعدًا.</p>
+    </div>
+    <div class="state-area">
+      <div id="orbState" class="state-orb-wrap" aria-hidden="true"><div class="orb"></div></div>
+      <div id="stateText" class="state-text" aria-live="polite">أنيس يستمع إليك</div>
+      <div id="stateHint" class="state-hint">هذه واجهة تجريبية — الصوت غير مفعّل بعد</div>
+    </div>
+    <div class="controls">
+      <button id="muteBtn" class="control" aria-pressed="false" aria-label="كتم الصوت">
+        <svg id="muteIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        <span id="muteLabel">كتم</span>
+      </button>
+      <button id="endBtn" class="control end" aria-label="إنهاء الجلسة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 15.5a12 12 0 0 1 15 0"/><path d="m7.5 18.5 2.5-3"/><path d="m16.5 18.5-2.5-3"/><path d="M5 15.5v3h3"/><path d="M19 15.5v3h-3"/></svg>
+        <span>إنهاء</span>
+      </button>
+    </div>
+    <p class="bottom-note">لا تحتاج إلى ترتيب كلماتك. خذ وقتك.</p>
+  </section>
+  <footer class="footer">أنيس · رفيقك الهادئ</footer>
+</main>
+<script>
+const welcome = document.getElementById('welcome');
+const chat = document.getElementById('chat');
+const startBtn = document.getElementById('startBtn');
+const endBtn = document.getElementById('endBtn');
+const muteBtn = document.getElementById('muteBtn');
+const muteLabel = document.getElementById('muteLabel');
+const muteIcon = document.getElementById('muteIcon');
+const orbState = document.getElementById('orbState');
+const stateText = document.getElementById('stateText');
+const stateHint = document.getElementById('stateHint');
+function showChat(){welcome.classList.remove('active');chat.classList.add('active');setMuted(false);stateText.textContent='أنيس يستمع إليك';stateHint.textContent='هذه واجهة تجريبية — الصوت غير مفعّل بعد';}
+function showWelcome(){chat.classList.remove('active');welcome.classList.add('active');setMuted(false);}
+function setMuted(value){muteBtn.classList.toggle('active',value);muteBtn.setAttribute('aria-pressed',String(value));muteBtn.setAttribute('aria-label',value?'إلغاء الكتم':'كتم الصوت');muteLabel.textContent=value?'إلغاء الكتم':'كتم';orbState.classList.toggle('muted',value);stateText.textContent=value?'أنيس في وضع الصمت':'أنيس يستمع إليك';stateHint.textContent='هذه واجهة تجريبية — الصوت غير مفعّل بعد';muteIcon.innerHTML=value?'<path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6"/><path d="m21 9-5 6"/>':'<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/>';}
+startBtn.addEventListener('click',showChat);
+endBtn.addEventListener('click',showWelcome);
+muteBtn.addEventListener('click',()=>setMuted(muteBtn.getAttribute('aria-pressed')!=='true'));
+</script>
+</body>
+</html>
